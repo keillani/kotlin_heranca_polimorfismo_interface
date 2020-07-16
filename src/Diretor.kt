@@ -10,6 +10,7 @@ class Diretor(
     cpf = cpf
 ) {
     override fun bonificacao(): Double {
+        println("bonificacao diretor")
         return super.bonificacao()+salario+plr
     }
 
