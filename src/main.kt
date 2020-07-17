@@ -25,5 +25,13 @@ fun main() {
     contaCorrente.transfere(100.0, contaPoupanca)
     println("saldo corrente após transferencia poupança: ${contaCorrente.saldo}")
     println("saldo poupança após transferir corrente ${contaPoupanca.saldo}")
+
+    val contaKei = ContaPoupanca("Keillani", 777)
+    val contaSonia = ContaPoupanca("Sonia",888)
+    val contaLucas = ContaPoupanca("Lucas",999)
+
+    val contas = mutableListOf(contaKei,contaLucas,contaSonia)
+
+    println(contas.last())
 }
 
