@@ -1,8 +1,8 @@
 fun testaComportamentosConta() {
-    val contaAlex = Conta(titular = "Alex", numero = 1000)
+    val contaAlex = ContaCorrente(titular = "Alex", numero = 1000)
     contaAlex.deposita(200.0)
 
-    val contaFran = Conta(numero = 1001, titular = "Fran")
+    val contaFran = ContaPoupanca(numero = 1001, titular = "Fran")
     contaFran.deposita(300.0)
 
     println(contaFran.titular)
@@ -39,12 +39,12 @@ fun testaComportamentosConta() {
 
     println("Transferência da conta da Fran para o Alex")
 
-    if (contaFran.transfere(destino = contaAlex, valor = 300.0)) {
+    if (contaFran.transfere(destino = contaAlex, valor = 200.0)) {
         println("Transferência sucedida")
     } else {
         println("Falha na transferência")
     }
 
-    println(contaAlex.saldo)
-    println(contaFran.saldo)
+    println("saldo conta alex: ${contaAlex.saldo}")
+    println("saldo conta fran: ${contaFran.saldo}")
 }
